@@ -1,0 +1,5 @@
+All UI designs, PNG assets, illustrations, and animations in this repository were created by Maham Syed.
+They are protected under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License (CC BY-NC-ND 4.0), see LICENSE file for details.
+
+Commercial use, redistribution, or modification is not permitted without permission.
+© 2025 Maham Syed
