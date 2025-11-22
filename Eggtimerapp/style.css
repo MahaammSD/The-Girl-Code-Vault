@@ -1,0 +1,227 @@
+/* Custom cursor */
+* {
+    cursor: url("https://cur.cursors-4u.net/holidays/hol-4/hol336.cur"),
+        url("https://cur.cursors-4u.net/holidays/hol-4/hol336.png"),
+        auto;
+}
+
+/* page layout */
+body {
+    display: flex;
+    justify-content: flex-start;
+    /* start from top */
+    align-items: center;
+    /* keep horizontally centered */
+    min-height: 100vh;
+    /* allow body to grow if content expands */
+    margin: 0;
+    flex-direction: column;
+    background-color: rgb(217, 230, 246);
+    color: rgb(252, 159, 167);
+    text-align: center;
+}
+
+/* Timer container outline */
+.timer-wrapper {
+    border: 3px solid rgb(76, 152, 201);
+    border-radius: 15px;
+    padding: 8px;
+    /* reduced padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    /* smaller spacing */
+    background-color: rgb(255, 245, 210);
+    width: 95%;
+    max-width: 400px;
+    /* limit width */
+    box-sizing: border-box;
+    /* include padding in width */
+}
+
+/* fonts */
+.press-start-2p-regular {
+    font-family: "Press Start 2P", system-ui;
+}
+
+.rubik-broken-fax-regular {
+    font-family: "Rubik Broken Fax", system-ui;
+}
+
+/* display */
+#display {
+    font-family: "Press Start 2P", system-ui;
+    font-size: 1.8em;
+    /* slightly smaller */
+    margin: 2px;
+    padding: 0;
+}
+
+/* ---------- SPINNER (side-by-side) ---------- */
+.spinner-row {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    /* smaller gap */
+    margin: 0 0 16px 0;
+    /* adjusted bottom margin */
+    flex-wrap: wrap;
+}
+
+.spinner {
+    display: inline-flex;
+    align-items: center;
+    border: 2px solid rgb(76, 152, 201);
+    border-radius: 12px;
+    overflow: hidden;
+    background: rgb(255, 228, 149);
+    padding: 4px;
+    /* reduced padding */
+    gap: 4px;
+    /* smaller gap */
+    min-width: 120px;
+    /* smaller width */
+}
+
+.spinner input::-webkit-outer-spin-button,
+.spinner input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.spinner input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.spinner input {
+    font-family: "Press Start 2P", system-ui;
+    font-size: 14px;
+    /* smaller font */
+    width: 45px;
+    /* smaller width */
+    text-align: center;
+    border: none;
+    outline: none;
+    background: rgb(252, 159, 167);
+    color: #e64381;
+    padding: 3px;
+    /* smaller padding */
+    border-radius: 6px;
+}
+
+.spinner .unit {
+    font-size: 12px;
+    /* smaller unit font */
+    font-weight: 700;
+    color: rgb(76, 152, 201);
+    margin: 0 3px;
+}
+
+/* +/- buttons */
+.spinner .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(76, 152, 201);
+    color: white;
+    font-size: 14px;
+    /* slightly smaller */
+    width: 12px;
+    /* adjusted width */
+    height: 12px;
+    /* adjusted height */
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.08s ease, background 0.12s ease;
+    user-select: none;
+}
+
+.spinner .btn:hover {
+    background: rgb(252, 159, 167);
+    transform: translateY(-2px);
+}
+
+.spinner .btn:active {
+    transform: translateY(0);
+    background: rgb(230, 5, 167);
+}
+
+/* Button container */
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    /* smaller gap */
+    margin-top: 8px;
+    /* reduced margin */
+}
+
+button.rubik-broken-fax-regular {
+    background: rgb(255, 228, 149);
+    color: rgb(230, 67, 129);
+    border: 2px solid rgb(76, 152, 201);
+    padding: 8px 16px;
+    /* smaller buttons */
+    font-size: 14px;
+    /* smaller font */
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.08s;
+}
+
+button.rubik-broken-fax-regular:hover {
+    background: rgb(252, 159, 167);
+    color: rgba(182, 5, 167, 0.89);
+    transform: translateY(-2px);
+}
+
+/* Stop button */
+.stop-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    /* slightly smaller */
+    transition: transform 0.12s ease;
+}
+
+.stop-button img {
+    width: 35px;
+    /* smaller image */
+    height: 35px;
+}
+
+.stop-button:hover {
+    transform: scale(1.15);
+}
+
+.spinner .btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Center egg images */
+#egg-gif,
+#egg-animation {
+    width: 180px;
+    /* smaller width */
+    max-height: 250px;
+    /* smaller height */
+    margin: 5px auto;
+    display: block;
+    object-fit: contain;
+}
+
+@media (max-width: 420px) {
+    .spinner {
+        min-width: 110px;
+    }
+
+    .spinner input {
+        width: 50px;
+        font-size: 14px;
+    }
+}

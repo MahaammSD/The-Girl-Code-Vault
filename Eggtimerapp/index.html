@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Egg Timer</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rubik+Broken+Fax&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="timer-wrapper">
+        <h1 class="press-start-2p-regular">Egg Timer</h1>
+
+        <!-- GIF (always visible now) -->
+        <img id="egg-gif" src="egg-start.gif" alt="Egg Animation">
+
+        <!-- PNG animation container (always visible now) -->
+        <div id="egg-animation"></div>
+
+
+        <!-- SPINNERS — side by side -->
+        <div class="spinner-row">
+            <div class="spinner">
+                <button class="btn minus" data-target="minutes">-</button>
+                <input type="number" id="minutes" value="10" min="0" max="59" aria-label="minutes">
+                <span class="unit">min</span>
+                <button class="btn plus" data-target="minutes">+</button>
+            </div>
+
+            <div class="spinner">
+                <button class="btn minus" data-target="seconds">-</button>
+                <input type="number" id="seconds" value="0" min="0" max="59" aria-label="seconds">
+                <span class="unit">sec</span>
+                <button class="btn plus" data-target="seconds">+</button>
+            </div>
+        </div>
+
+        <!-- Display -->
+        <p id="display" class="press-start-2p-regular">10:00</p>
+
+        <!-- Buttons -->
+        <div class="button-container">
+            <button id="startbutton" class="rubik-broken-fax-regular">Start Timer</button>
+
+            <button id="stopbutton" class="stop-button" title="Stop / Pause">
+                <img src="stop.png" alt="Stop Timer">
+            </button>
+
+            <button id="resetbutton" class="rubik-broken-fax-regular">Reset Timer</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
